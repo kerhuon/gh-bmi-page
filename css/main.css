@@ -1,0 +1,28 @@
+input{
+    max-width:70px
+}
+
+li{
+    margin-bottom: 14px;
+}
+th, td{
+	border: 1px solid black;
+}
+th{
+	background-color: #E59C6E;
+	text-align: center;
+}
+.class-green{
+	color:green;
+}
+.class-red{
+	color:red;
+	font-size:2em;
+}
+.class-orange{
+	color:orange;
+}
+.class-orange-plus{
+	color:orange;
+	font-size:2em;
+}

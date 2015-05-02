@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+
+    
+  </head>
+  <body ng-app="myApp">
+    <h1>Calcul de votre IMC</h1>
+
+    <div ng-controller="BillCtrl">
+
+    <label>Poids(kg) : </label><input ng-model="poids"/>
+    <label>Taille(cm) : </label><input ng-model="taille"/>
+    <p><strong>Votre IMC est de : </strong><span>{{imc()|number:2}}</span></p>
+    <p><strong>Votre profil : </strong><span ng-class="myVar">{{profil()}}</span></p>
+    
+
+    <table>
+    <caption>Pour une taille de référence de {{taille}} cm</caption>
+    <tr>
+        <th>IMC</th><th>Poids(kg)</th><th>Profil</th>
+    </tr>
+
+    <tr><td>Inférieur à 16.5</td><td>Inférieur à {{poidsCalcule(16.5)|number:1}}</td><td>Dénutrition ou famine</td></tr>
+    <tr><td>Compris entre 16.5 et 18.5</td><td>Compris entre {{poidsCalcule(16.5)|number:1}} et {{poidsCalcule(18.5)|number:1}}</td><td>Maigreur</td></tr>
+    <tr><td>Compris entre 18.5 et 25</td><td>Compris entre {{poidsCalcule(18.5)|number:1}} et {{poidsCalcule(25)|number:1}}</td><td>Corpulence normale</td></tr>
+    <tr><td>Compris entre 25 et 30</td><td>Compris entre {{poidsCalcule(25)|number:1}} et {{poidsCalcule(30)|number:1}}</td><td>Surpoids</td></tr>
+    <tr><td>Compris entre 30 et 35</td><td>Compris entre {{poidsCalcule(30)|number:1}} et {{poidsCalcule(35)|number:1}}</td><td>Obésité modérée</td></tr>
+    <tr><td>Compris entre 35 et 40</td><td>Compris entre {{poidsCalcule(35)|number:1}} et {{poidsCalcule(40)|number:1}}</td><td>Obésité sévère</td></tr>
+    <tr><td>Supérieur à 40</td><td>Supérieur à {{poidsCalcule(40)|number:1}}</td><td>Obésité morbide ou massive</td></tr>
+
+    
+
+    </table>
+
+    </div>
+
+    
+        
+    
+    <!-- Javascript de Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Include the AngularJS library -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+    <!-- Directives -->
+
+</body>
+</html>
