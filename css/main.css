@@ -1,15 +1,21 @@
-input{
-    max-width:70px
+body{
+	font-family: "Montserrat",Serif;
+	background-image: url("../img/body03.png");
+	background-attachment:fixed; 
 }
-
-li{
-    margin-bottom: 14px;
+h1{	
+	margin-bottom: 40px;
+	text-align: center;
+	background-image: url("../img/fond_jaune.png");
+	border:1px solid grey;
+	border-radius: 6px;	
 }
-th, td{
-	border: 1px solid black;
+article{
+	background-image: url("../img/fond_jaune.png");	
+	border:1px solid grey;
+	border-radius: 6px;	
 }
-th{
-	background-color: #E59C6E;
+caption{
 	text-align: center;
 }
 .class-green{
@@ -17,12 +23,12 @@ th{
 }
 .class-red{
 	color:red;
+	
+}
+.class-red-plus{
+	color:red;
 	font-size:2em;
 }
 .class-orange{
 	color:orange;
-}
-.class-orange-plus{
-	color:orange;
-	font-size:2em;
 }
